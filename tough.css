@@ -1,0 +1,784 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  /* overflow-y: scroll;   */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.outerwrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-promotion p {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.header-promotion {
+  padding: 0px;
+  background: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.LOGO-WRAPPER {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  width: 400px;
+  width: 100%;
+  left: calc(100% - 400px);
+  transition: 0.6 sec;
+}
+
+.LOGO {
+  width: 35px;
+  height: 35px;
+
+  /* margin-bottom:-8px;  */
+}
+
+.shop-text {
+  color: #7cb9e8;
+  font-size: 25px;
+  padding: 4px;
+}
+
+.savvy {
+  color: #00ffff;
+  font-size: 25px;
+}
+
+.demo {
+  padding: 0px;
+  display: flex;
+  background: white;
+  height: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid gainsboro;
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+.HEADER-CONTAINER-WRAPPER {
+  display: flex;
+  align-items: center;
+  /* min-width:1200px;  */
+  /* max-width:1099px;    */
+  justify-content: space-around;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.SEARCH-BAR-CONTAINER {
+  display: flex;
+  width: 200px;
+  padding: 10px;
+  background-color: #f6f6f6;
+  /* align-items:center; */
+  border-radius: 28px;
+  transition: background 0.2s;
+  /* margin-right:auto; */
+  overflow: hidden;
+}
+
+#SEARCH-BAR-ICONS {
+  padding: 5px;
+}
+
+.SEARCH-BAR {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* color:red; */
+  color: #333333;
+  margin-left: 1px;
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 70%;
+  /* flex: 1; */
+}
+
+.SEARCH-BAR-CONTAINER:focus-within {
+  background: #f1f1f1;
+  /* background-color: #00FFFF; */
+}
+
+.SEARCH-BAR ::placeholder {
+  color: gray; /* Change the color to your desired value */
+  font-style: italic; /* Add any additional styles you want */
+}
+
+.LEFT-WRAPPER {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: burlywood;
+  /* padding-left:90%; */
+  /* right:0; */
+}
+
+form.DROPDOWN {
+  margin: 10px;
+}
+
+/* Style the select dropdown */
+form.DROPDOWN select {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: grey;
+}
+
+/* Remove border on select when focused */
+form.DROPDOWN select:focus {
+  border: none;
+  outline: none;
+}
+
+/* 
+form.DROPDOWN input[type="submit"] {
+ padding: 8px 16px;
+ font-size: 16px;
+ background-color: #007bff;
+ color: #fff;
+ border: none; 
+ cursor: pointer;
+}
+*/
+
+/*  
+
+form.DROPDOWN input[type="submit"]:hover {
+ background-color: #0056b3;
+
+}
+*/
+
+/*SIGN-IN-WRAPPER*/
+
+.SIGN-IN-ICONS {
+  font-size: larger;
+  color: grey;
+}
+
+.SIGN-IN-ICONS:hover {
+  color: #7cb9e8;
+}
+
+/*SIGN-IN-PAGE*/
+.LOGIN-IN-WRAPPER {
+  padding: 400px;
+}
+
+.REMEMBER-ME a {
+  text-decoration: none;
+}
+
+.CATEGORY a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: grey;
+  font-weight: 450;
+  text-decoration: none;
+}
+
+.CATEGORY-WRAPPER {
+  display: flex;
+  padding: 5px;
+  padding-left: 50px;
+  /* max-width: 1000px; */
+  /* margin-left:-8px; */
+  position: relative;
+  align-items: center;
+  gap: 20px;
+}
+
+.CATEGORY a:hover {
+  color: #7cb9e8;
+}
+
+.HEADER-LOWER-WRAPPER {
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0px;
+  width: 100%;
+  /* border-bottom: 1px solid gainsboro; */
+  /* background: #00FFFF; */
+}
+
+.subcategories {
+  display: none;
+}
+
+.ICON-WRAPPER {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  margin-right: 0%;
+  align-items: center;
+  gap: 5%;
+  padding-right: 5%;
+}
+
+.CART-WRAPPER {
+  position: relative;
+  /* display: flex; */
+}
+
+.CART-ICONS {
+  font-size: larger;
+  color: grey;
+}
+
+.CART-ICONS:hover {
+  color: #7cb9e8;
+}
+
+.count {
+  display: block;
+  position: absolute;
+}
+
+.CART-BLOCK {
+  visibility: hidden;
+  padding: 0%;
+  /* opacity: 0; */
+  /* display: none; */
+  position: fixed;
+  display: grid;
+  padding: 0px;
+  background-color: black;
+  top: 0px;
+  right: 0;
+  z-index: 1000;
+  width: 200px;
+  background-color: white;
+}
+
+.cartheader {
+  display: flex;
+  background-color: #00ffff;
+}
+
+.CART-WRAPPER:hover .CART-BLOCK {
+  /* display: block; */
+  visibility: visible;
+}
+
+.CART-WRAPPER span {
+  display: flex;
+  background-color: red;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-radius: 50px;
+  position: absolute;
+  top: -15px;
+  left: 88%;
+  color: white;
+}
+
+.Heart {
+  font-size: larger;
+  color: grey;
+}
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* CART PART */
+
+.wishlistwrapper {
+  padding: 100px;
+  position: relative;
+
+  margin-top: 100px;
+  overflow: hidden;
+  background: url("https://i.pinimg.com/564x/cd/02/ef/cd02ef56c112234b3a4bc43600489f5b.jpg");
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.cartpagewrapper {
+  margin: 100px;
+}
+
+.cartpagewrapperheader {
+  display: block;
+}
+
+.cartpagewrapperheader p {
+  color: black;
+  font-size: 28px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+.image {
+  width: 20%;
+  height: 20%;
+}
+
+.plus,
+.minus {
+  cursor: pointer;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+}
+
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+/* ------------------------------------------- */
+
+.CART-BLOCK {
+  /* display: flex; */
+  top: 0%;
+  right: 0%;
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  /* background-color: black;  */
+}
+
+.CARTBLOCKINNER {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: start;
+}
+
+.Heart:hover {
+  color: red;
+}
+
+.BARS-WRAPPER {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  padding-top: 9%;
+  margin-top: auto;
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  animation: slide 16s infinite;
+  /* align-items: center;  
+   /* justify-content:center;  */
+}
+
+.responsiveimage {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+
+  55% {
+    transform: translateX(-100%);
+  }
+
+  75% {
+    transform: translateX(-200%);
+  }
+
+  /*
+ 
+  80%{
+      transform: translateX(-300%);
+  }
+  100%{
+      transform: translateX(-300%);
+  }
+*/
+}
+
+.PRODUCT-WRAPPER {
+  padding: 50px;
+  background-color: white;
+
+  margin: 0 auto;
+  /* background-color: #333333;  */
+
+  /* background-color: white; */
+}
+
+.PRODUCT-INNER-WRAPPER {
+  /* background-color: #00FFFF; */
+  padding: 10px;
+  padding-left: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  /* grid: auto-flow / 1fr 1fr  ;  */
+  /* grid- */
+  gap: 2rem;
+}
+
+.PRODUCT-IMAGE-WRAPPER img {
+  width: 100px;
+}
+
+.PRODUCT-INNER-WRAPPER-2 {
+  padding: 10px;
+  padding-left: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  /* grid: auto-flow / 1fr 1fr  ;  */
+  gap: 2rem;
+}
+
+.PRODUCT-INNER-WRAPPER-3 {
+  padding: 10px;
+  padding-left: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  /* grid: auto-flow / 1fr 1fr  ;  */
+  gap: 2rem;
+}
+
+.PRODUCT {
+  /* background-color:#e1e1e1; */
+  /* background-color: white; */
+  /* background-color:#e1e1e1; */
+  /* background-color: #333333;  */
+
+  /* padding: 30px; */
+  border-radius: 10px;
+}
+
+.PRODUCT img {
+  width: 100%;
+  height: 100%;
+  /* padding-left:50px; */
+  /* margin-left: auto; */
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.PRODUCT:hover img {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.PRODUCT h1 {
+  /* color:darkslategrey; */
+  /* color:#00FFFF; */
+  /* color:#7CB9E8; */
+  padding: 0px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.PRODUCT p {
+  color: grey;
+  font-weight: 200;
+  padding: 0px;
+}
+
+.product-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.PRODUCT-HEADER {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Time Over! HEADER */
+.header {
+  color: black;
+  font-size: medium;
+  font-family: 200;
+}
+
+.PRODUCT-CONTAINER {
+  padding: 30px;
+  background-color: #f6f6f6;
+  /* background-color:#f6f6f6; */
+  /* background-color:#ececec; */
+  border-radius: 10px;
+}
+
+.product-price {
+  color: #333333;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.ICON {
+  display: inline-block;
+  margin: 10%;
+}
+
+/* .DAILY .Heart{ */
+/* padding-left: 80px; */
+
+/* } */
+
+.DAILY .CART-ICONS {
+  /* padding-left:50px; */
+  padding-left: 100px;
+}
+
+.PRODUCT-ADVERTISEMENT-WRAPPER {
+  padding: 5px;
+}
+
+.PRODUCT-ADVERTISEMENT img {
+  width: 90%;
+  height: 10%;
+}
+
+.PRODUCT-ADVERTISEMENT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.FOOTER-WRAPPER {
+  background-image: url("https://i.etsystatic.com/9949302/r/il/176e1c/3019560996/il_1588xN.3019560996_touj.jpg");
+  background-color: #333333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  padding-top: 100px;
+}
+
+.footer-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: -74px;
+  padding: 10px;
+  padding-bottom: 15px;
+}
+
+.footer-column a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: all 0.4s ease;
+  opacity: 0.8;
+}
+
+.footer-column a {
+  cursor: pointer;
+}
+
+.footer-column a {
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: 450;
+  text-decoration: none;
+  margin-bottom: 8px;
+  opacity: 0.75;
+
+  transition: all 0.6s ease;
+}
+
+.footer-column a:hover {
+  opacity: 1;
+}
+
+.FOOTER-PROMOTION-WRAPPER {
+  display: flex;
+  align-items: center;
+  margin-right: 2%;
+  border-top: 1px solid grey;
+}
+
+.FOOTER-PROMOTION-INNER-WRAPPER {
+  display: flex;
+  margin-left: 3%;
+}
+
+.CARD-CONTAINER {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+  margin-right: 0px;
+  gap: 5%;
+  padding: 10px;
+}
+
+/* .a :hover{ 
+
+  /* color:blueviolet; */
+
+/* } */
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .footer-inner-wrapper {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+  .footer-inner-wrapper {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+/*---- TABLET RESPONSIVE------ */
+
+@media (max-width: 1041px) {
+  .SEARCH-BAR-CONTAINER {
+    display: flex;
+    /* position:absolute; */
+    /* background-color: white;    */
+    margin-right: 20%;
+    padding: 5px;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+  }
+
+  #SEARCH-BAR-ICONS {
+    padding: 5px;
+    position: absolute;
+  }
+
+  .SEARCH-BAR {
+    display: none;
+  }
+
+  .HEADER-LOWER-WRAPPER {
+    padding: 0px;
+    justify-content: end;
+    margin-right: 110px;
+  }
+
+  .CATEGORY-WRAPPER {
+    display: none;
+  }
+
+  .DROPDOWN {
+    display: none;
+  }
+
+  .SIGN-IN-WRAPPER {
+    display: flex;
+  }
+
+  .ICON-WRAPPER {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    /* margin-left:0%; */
+    align-items: center;
+    right: 0;
+    gap: 20%;
+    /* padding-left:5%;  */
+    /* margin-top:-120px; */
+    /* margin-right:8%; */
+  }
+
+  .CART-WRAPPER {
+    display: flex;
+    font-size: 15px;
+  }
+
+  .HEART-WRAPPER {
+    display: flex;
+    font-size: 15px;
+  }
+
+  .BARS-WRAPPER {
+    display: flex;
+    font-size: 17px;
+  }
+
+  .bars {
+    color: grey;
+    padding: 10px;
+  }
+
+  .bars:hover {
+    color: #7cb9e8;
+  }
+}
+
+@media (min-width: 1400px) {
+  .CATEGORY-WRAPPER {
+    display: flex;
+    padding-right: 30%;
+  }
+
+  .ICON-WRAPPER {
+    display: flex;
+  }
+}
